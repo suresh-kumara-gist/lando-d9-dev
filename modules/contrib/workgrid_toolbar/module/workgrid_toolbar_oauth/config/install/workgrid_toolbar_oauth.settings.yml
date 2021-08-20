@@ -1,0 +1,5 @@
+workgridCredentials: 'workgrid credentials'
+tokenExpiration: 3600
+companyCode: 'company code'
+spaceId: 'space id'
+tokenUrl: 'token url'

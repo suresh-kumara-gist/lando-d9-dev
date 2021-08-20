@@ -1,0 +1,6 @@
+workgrid_toolbar_oauth.settings_form:
+  title: Workgrid Toolbar Oauth
+  description: Configure Workgrid Toolba Oauth.
+  parent: system.admin_config_system
+  route_name: workgrid_toolbar_oauth.settings_form
+  weight: 10

@@ -1,0 +1,6 @@
+oauth2_client.oauth2_client_plugins:
+  title: Oauth2 Client Configuration
+  description: Configure and initialize Oauth2 clients.
+  route_name: oauth2_client.oauth2_client_plugin_list
+  parent: system.admin_config_system
+  weight: 30

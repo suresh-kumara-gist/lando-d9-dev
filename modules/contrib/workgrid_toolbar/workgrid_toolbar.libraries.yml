@@ -1,0 +1,18 @@
+workgrid_toolbar:
+  js:
+    js/workgrid-toolbar.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - workgrid_toolbar/workgridjs
+
+# Third-party library (CDN).
+workgridjs:
+  remote: https://app.workgrid.com/
+  version: v5
+  license:
+     name: MIT
+     url: https://github.com/Workgrid/workgrid-javascript/blob/master/LICENSE
+     gpl-compatible: true
+  js:
+    https://app.workgrid.com/workgrid-v5.js: {type: external, minified: true}

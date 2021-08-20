@@ -1,0 +1,8 @@
+name: Workgrid Toolbar Oauth
+type: module
+description: "This module provides Workgrid customers an easy and repeatable way to 
+add the Workgrid Toolbar to their existing Drupal sites."
+package: Workgrid Toolbar
+core_version_requirement: ^8.8 || ^9
+dependencies: [key, oauth2_client]
+configure: workgrid_toolbar_oauth.settings_form

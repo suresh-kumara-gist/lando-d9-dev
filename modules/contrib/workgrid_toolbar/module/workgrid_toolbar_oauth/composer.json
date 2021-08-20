@@ -1,0 +1,27 @@
+ {
+  "name": "drupal/workgrid_toolbar",
+  "description": "This module provides Workgrid customers an easy and repeatable way to add the Workgrid Toolbar to their existing Drupal sites.",
+  "type": "drupal-module",
+  "homepage": "http://drupal.org/project/workgrid_toolbar",
+  "authors": [
+    {
+      "name": "Ian Cole",
+      "homepage": "https://www.drupal.org/u/iancole",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Shiva",
+      "homepage": "https://www.drupal.org/u/shiva",
+      "role": "Maintainer"
+    }    
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/workgrid_toolbar",
+    "source": "https://git.drupalcode.org/sandbox/ian.cole-3203002.git"
+  },
+  "require": {
+  	"drupal/core": "^8.8.0 || ^9.0",
+    "drupal/key":  "^8.x-1.14" ,
+	  "drupal/oauth2_client": "3.0-beta1"
+  }
+}

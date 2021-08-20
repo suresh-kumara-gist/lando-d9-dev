@@ -1,0 +1,14 @@
+workgrid_toolbar_oauth.get-toolbar-token:
+  path: '/workgrid-toolbar-oauth/get-toolbar-token'
+  defaults:
+    _controller: '\Drupal\workgrid_toolbar_oauth\Controller\WorkgridToolbarOauthController::build'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+workgrid_toolbar_oauth.settings_form:
+  path: '/admin/config/system/workgrid-toolbar-oauth'
+  defaults:
+    _title: 'Workgrid Toolbar Oauth Settings'
+    _form: 'Drupal\workgrid_toolbar_oauth\Form\SettingsForm'
+  requirements:
+    _permission: 'administer workgrid_toolbar_oauth configuration'

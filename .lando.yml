@@ -1,0 +1,46 @@
+name: my-first-drupal9-app
+recipe: drupal9
+config:
+  xdebug: true
+  webroot: .
+  # php: '7.4'
+proxy:
+  mailhog:
+    - mail.projectname.lndo.site # Change projectname to the same as the name key above.
+  adminer:
+    - adminer.projectname.lndo.site # Change projectname to the same as the name key above.
+services:
+  appserver:
+    overrides:
+      environment:
+        SIMPLETEST_BASE_URL: "http://appserver"
+        SIMPLETEST_DB: "sqlite://localhost/tmp/db.sqlite"
+        MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", {"browserName":"chrome","chromeOptions":{"args":["--disable-gpu","--headless", "--no-sandbox"]}}, "http://chrome:9515"]'
+        DRUSH_OPTIONS_ROOT: '/app/web'
+        DRUSH_OPTIONS_URI: 'http://projectname.lndo.site' # Change projectname to the same as the name key above.
+  database:
+    creds:
+      user: database
+      password: database
+      database: database
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+    portforward: true
+  adminer:
+    type: compose
+    services:
+      image: dehy/adminer
+      command: '/bin/s6-svscan /etc/services.d'
+    portforward: true
+  chrome:
+    type: compose
+    app_mount: false
+    services:
+      image: drupalci/webdriver-chromedriver:production
+      command: chromedriver --log-path=/tmp/chromedriver.log --verbose --whitelisted-ips=
+tooling:
+  test:
+    service: appserver
+    cmd: "php /app/vendor/bin/phpunit -c /app/phpunit.xml"

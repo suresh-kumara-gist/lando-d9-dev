@@ -1,0 +1,36 @@
+block.settings.workgrid_toolbar:
+  type: block_settings
+  label: 'WorkGridToolbar Block'
+  mapping:
+    margintop:
+      type: string
+      label: Margin Top
+    marginbottom:
+      type: string
+      label: Margin Bottom
+    workgridCredentials:
+      type: string
+      label: Select Workgrid Key
+    tokenExpiration:
+      type: string
+      label: Token Expiration
+    spaceId:
+      type: string
+      label: Space Id
+    companyCode:
+      type: string
+      label: Company Code
+
+workgrid_toolbar.settings:
+  type: config_object
+  label: 'Workgrid Toolbar Settings'
+  mapping:
+    companyCode:
+      type: string
+      label: 'Company Code'
+    spaceId:
+      type: string
+      label: 'Space Id'
+    authendpoint:
+      type: string
+      label: 'Auth end point'

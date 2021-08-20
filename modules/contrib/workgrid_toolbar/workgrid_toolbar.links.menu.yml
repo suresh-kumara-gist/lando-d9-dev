@@ -1,0 +1,6 @@
+workgrid_toolbar.settings_form:
+  title: Workgrid Toolbar
+  description: Configure Workgrid Toolbar.
+  parent: system.admin_config_system
+  route_name: workgrid_toolbar.settings_form
+  weight: 10

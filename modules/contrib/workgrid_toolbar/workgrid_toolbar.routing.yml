@@ -1,0 +1,14 @@
+# workgrid_toolbar.get-toolbar-token:
+#   path: '/workgrid-toolbar/get-toolbar-token'
+#   defaults:
+#     _controller: '\Drupal\workgrid_toolbar\Controller\WorkgridToolbarController::build'
+#   requirements:
+#     _user_is_logged_in: 'TRUE'
+
+workgrid_toolbar.settings_form:
+  path: '/admin/config/system/workgrid-toolbar'
+  defaults:
+    _title: 'Workgrid Toolbar Settings'
+    _form: 'Drupal\workgrid_toolbar\Form\SettingsForm'
+  requirements:
+    _permission: 'administer workgrid_toolbar configuration'

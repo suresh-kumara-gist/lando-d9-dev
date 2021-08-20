@@ -1,0 +1,7 @@
+name: Workgrid Toolbar
+type: module
+description: "This module provides Workgrid customers an easy and repeatable way to 
+add the Workgrid Toolbar to their existing Drupal sites."
+package: Workgrid Toolbar
+core_version_requirement: ^8.8 || ^9
+configure: workgrid_toolbar.settings_form

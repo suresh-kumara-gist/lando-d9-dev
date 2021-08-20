@@ -1,0 +1,42 @@
+block.settings.workgrid_toolbar_oauth:
+  type: block_settings
+  label: 'WorkGrid Toolbar Oauth Block'
+  mapping:
+    margintop:
+      type: string
+      label: Margin Top
+    marginbottom:
+      type: string
+      label: Margin Bottom
+    workgridCredentials:
+      type: string
+      label: Select Workgrid Key
+    tokenExpiration:
+      type: string
+      label: Token Expiration
+    spaceId:
+      type: string
+      label: Space Id
+    companyCode:
+      type: string
+      label: Company Code
+
+workgrid_toolbar_oauth.settings:
+  type: config_object
+  label: 'Workgrid Toolbar Oauth Settings'
+  mapping:
+    workgridCredentials:
+      type: string
+      label: 'Workgrid Credentials'
+    tokenExpiration:
+      type: integer
+      label: 'Token Expiration'
+    companyCode:
+      type: string
+      label: 'Company Code'
+    spaceId:
+      type: string
+      label: 'Space Id'
+    tokenUrl:
+      type: string
+      label: 'Token Url'
